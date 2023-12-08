@@ -1,8 +1,10 @@
 # Makefile
 compile:
-	MinGW32-make compileCard
-	MinGW32-make compileHandEval
-	g++ -Wall driver.cpp Card.o HandEvaluator.o
+	make compileCard
+	make compileHandEval
+	g++ -Wall driver.cpp Card.o HandEvaluator.o -o PokerEvaluator.exe
+run:
+	./PokerEvaluator.exe
 compileCard:
 	g++ -Wall Card.cpp -c
 compileHandEval:
