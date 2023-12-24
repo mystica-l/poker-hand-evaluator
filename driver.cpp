@@ -77,6 +77,7 @@ bool validCard(string input, Card &referenceCard)
       break;
     case '6':
       inputValue = SIX;
+      break;
     case '7':
       inputValue = SEVEN;
       break;
@@ -102,7 +103,8 @@ bool validCard(string input, Card &referenceCard)
       inputValue = ACE;
       break;
     default:
-      inputValue = ACE;
+      cout << "Invalid card value" << endl;
+      return false;
   }
   switch(input[1])
   {
